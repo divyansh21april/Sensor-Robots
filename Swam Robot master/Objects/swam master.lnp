@@ -1,0 +1,5 @@
+".\Objects\STARTUP.obj",
+".\Objects\swam master.obj" 
+TO ".\Objects\swam master" 
+PRINT(".\Listings\swam master.m51") RAMSIZE(256) 
+CODE( 0X0000-0X1FFF )

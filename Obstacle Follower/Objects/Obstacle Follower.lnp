@@ -1,0 +1,5 @@
+".\Objects\STARTUP.obj",
+".\Objects\Obstacle Follower.obj" 
+TO ".\Objects\Obstacle Follower" 
+PRINT(".\Listings\Obstacle Follower.m51") RAMSIZE(256) 
+CODE( 0X0000-0X1FFF )

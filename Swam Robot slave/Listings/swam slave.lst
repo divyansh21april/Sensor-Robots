@@ -1,0 +1,59 @@
+C51 COMPILER V9.56.0.0   SWAM_SLAVE                                                        06/21/2017 23:00:29 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE SWAM_SLAVE
+OBJECT MODULE PLACED IN .\Objects\swam slave.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE swam slave.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listing
+                    -s\swam slave.lst) TABS(2) OBJECT(.\Objects\swam slave.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include<stdio.h>
+   3          #define lt 0x06;
+   4          #define rt 0x09;
+   5          #define st 0x0a;
+   6          #define rev 0x05;
+   7          #define stop 0x00;
+   8          unsigned int a;
+   9          void main()
+  10          {
+  11   1      while(1)
+  12   1      {
+  13   2      a=P0&0x0f;
+  14   2      if(a==0x06)
+  15   2      {
+  16   3        P2=lt;
+  17   3      }
+  18   2      if(a==0x09)
+  19   2      {
+  20   3        P2=rt;
+  21   3      }
+  22   2      if(a==0x0a)
+  23   2      {
+  24   3        P2=st;
+  25   3      }
+  26   2      if(a==0x00)
+  27   2      {
+  28   3        P2=stop;
+  29   3      }
+  30   2      if(a==0x05)
+  31   2        {
+  32   3          P2=rev;
+  33   3        }
+  34   2      }
+  35   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     61    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

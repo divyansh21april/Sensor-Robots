@@ -1,0 +1,5 @@
+".\Objects\STARTUP.obj",
+".\Objects\Line_follower.obj" 
+TO ".\Objects\Line Follower" 
+PRINT(".\Listings\Line Follower.m51") RAMSIZE(256) 
+CODE( 0X0000-0X1FFF )

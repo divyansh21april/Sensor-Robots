@@ -1,0 +1,5 @@
+".\Objects\STARTUP.obj",
+".\Objects\Obstacle Avoider.obj" 
+TO ".\Objects\Obstacle Avoider" 
+PRINT(".\Listings\Obstacle Avoider.m51") RAMSIZE(256) 
+CODE( 0X0000-0X1FFF )

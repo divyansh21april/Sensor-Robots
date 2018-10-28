@@ -1,0 +1,81 @@
+C51 COMPILER V9.56.0.0   MOBILE_CONTROLLER                                                 04/03/2018 21:08:35 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE MOBILE_CONTROLLER
+OBJECT MODULE PLACED IN .\Objects\Mobile Controller.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE Mobile Controller.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\
+                    -Listings\Mobile Controller.lst) TABS(2) OBJECT(.\Objects\Mobile Controller.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include<stdio.h>
+   3          #define lt 0x06;
+   4          #define rt 0x09;
+   5          #define fwd 0x0a;
+   6          #define bck 0x05;
+   7          #define stp 0x00;
+   8          unsigned int a;
+   9          void main()
+  10          {
+  11   1        while(1)
+  12   1        {
+  13   2          a=P0&0x0f;
+  14   2          if(a==0x02)
+  15   2          {
+  16   3            P2=fwd;
+  17   3          }
+  18   2          if(a==0x04)
+  19   2          {
+  20   3            P2=lt;
+  21   3          }
+  22   2          if(a==0x06)
+  23   2          {
+  24   3            P2=rt;
+  25   3          }
+  26   2          if(a==0x08)
+  27   2          {
+  28   3            P2=bck;
+  29   3          }
+  30   2          if(a==0x05)
+  31   2          {
+  32   3            P2=stp;
+  33   3          }
+  34   2          if(a==0x01)
+  35   2          {
+  36   3            P2=fwd;
+  37   3            P2=lt;
+  38   3          }
+  39   2          if(a==0x03)
+  40   2          {
+  41   3            P2=fwd;
+  42   3            P2=rt;
+  43   3          }
+  44   2          if(a==0x07)
+  45   2          {
+  46   3            P2=bck;
+  47   3            P2=lt;
+  48   3          }
+  49   2          if(a==0x09)
+  50   2          {
+  51   3            P2=bck;
+  52   3            P2=rt;
+  53   3          }
+  54   2        }
+C51 COMPILER V9.56.0.0   MOBILE_CONTROLLER                                                 04/03/2018 21:08:35 PAGE 2   
+
+  55   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    119    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

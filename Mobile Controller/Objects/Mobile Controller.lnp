@@ -1,0 +1,5 @@
+".\Objects\STARTUP.obj",
+".\Objects\Mobile Controller.obj" 
+TO ".\Objects\Mobile Controller" 
+PRINT(".\Listings\Mobile Controller.m51") RAMSIZE(256) 
+CODE( 0X0000-0X1FFF )

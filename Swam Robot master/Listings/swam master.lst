@@ -1,0 +1,64 @@
+C51 COMPILER V9.56.0.0   SWAM_MASTER                                                       06/21/2017 23:15:04 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE SWAM_MASTER
+OBJECT MODULE PLACED IN .\Objects\swam master.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE swam master.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listin
+                    -gs\swam master.lst) TABS(2) OBJECT(.\Objects\swam master.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include<stdio.h>
+   3          #define lt 0x06;
+   4          #define rt 0x09;
+   5          #define fwd 0x0a;
+   6          #define bck 0x05;
+   7          #define stp 0x00;
+   8          unsigned int a;
+   9          void main()
+  10          {
+  11   1        while(1)
+  12   1        {
+  13   2          a=P0&0x0f;
+  14   2          if(a==0x02)
+  15   2          {
+  16   3            P2=fwd;
+  17   3            P3=P2;
+  18   3          }
+  19   2          if(a==0x04)
+  20   2          {
+  21   3            P2=lt;
+  22   3            P1=P2;
+  23   3          }
+  24   2          if(a==0x06)
+  25   2          {
+  26   3            P2=rt;
+  27   3            P3=P2;
+  28   3          }
+  29   2          if(a==0x08)
+  30   2          {
+  31   3            P2=bck;
+  32   3            P3=P2;
+  33   3          }
+  34   2          if(a==0x05)
+  35   2          {
+  36   3            P2=stp;
+  37   3            P3=P2;
+  38   3          }
+  39   2        }
+  40   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     78    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

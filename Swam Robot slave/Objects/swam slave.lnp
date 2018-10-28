@@ -1,0 +1,5 @@
+".\Objects\STARTUP.obj",
+".\Objects\swam slave.obj" 
+TO ".\Objects\swam slave" 
+PRINT(".\Listings\swam slave.m51") RAMSIZE(256) 
+CODE( 0X0000-0X1FFF )
